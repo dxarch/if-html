@@ -1,0 +1,37 @@
+.section-title {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
+.highlited-divider {
+    border: none;
+    width: 100px;
+    height: 4px;
+    background: #F5BD41;
+    margin-bottom: 80px;
+}
+
+.offer-items {
+    margin: 0 104px 120px 104px;
+}
+
+.offer-item {
+    display: inline-block;
+    width: 296px;
+    text-align: center;
+}
+
+.offer-item + .offer-item {
+    margin-left: 16px;
+}
+
+.offer-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 48px;
+}
+
+.offer-title {
+    margin: 0 auto;
+}
