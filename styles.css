@@ -13,7 +13,9 @@
 }
 
 .offer-items {
-    margin: 0 104px 120px 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .offer-item {
