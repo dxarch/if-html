@@ -76,6 +76,11 @@ body {
     list-style-type: none;
 }
 
+.footer-title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
 .footer-link {
     text-decoration: none;
     font-size: 20px;
