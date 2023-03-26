@@ -4,9 +4,167 @@
     box-sizing: border-box;
 }
 
+input, button {
+    border: none;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #383838;
+}
+
+.top-section {
+    min-height: 100vh;
+    background-image: url(../images/background-castle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.nav {
+    height: 46px;
+    padding: 51px 104px 0;
+    margin-bottom: 196px;
+    justify-content: space-between;
+}
+
+.nav-container {
+    gap: 48px;
+}
+
+.nav-gap {
+    gap: 24px
+}
+
+.nav-link {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.underlined-link::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 12px;
+    margin: 0 auto;
+    height: 3px;
+    width: 50px;
+    background-color: #F5BD41;
+}
+
+.center-align {
+    display: flex;
+    align-items: center;
+}
+
+.sprite {
+    background-image: url(../images/sprites/top-sprite.png);
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 33.33%;
+}
+
+.sprite.logo-icon {
+    width: 205px;
+    background-position: 0 0;
+}
+
+.sprite.night-icon {
+    width: 30px;
+    height: 30px;
+    background-position: -205px -6px;
+}
+
+.sprite.account-icon {
+    width: 40px;
+    background-position: -235px;
+}
+
+.top-content {
+    margin-left: 104px;
+    margin-right: 104px;
+    padding-bottom: 120px;
+}
+
+.content-title {
+    width: 542px;
+    height: 118px;
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+.booking-hints {
+    display: flex;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    gap: 221px;
+}
+
+.booking-hint {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.booking-container {
+    display: flex;
+    max-width: 1223px;
+    height: 64px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 120px;
+}
+
+.booking-input {
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.download-links {
+    width: 271px;
+    height: 40px;
+    display: flex;
+    gap: 16px;
+    margin: 0 auto;
+}
+
+.sprite.google-play {
+    width: 135px;
+    background-position: -275px;
+}
+
+.sprite.app-store {
+    width: 120px;
+    background-position: -410px;
+}
+
+#city {
+    width: 467px;
+    padding-left: 24px;
+    border-radius: 8px;
+}
+
+#dates {
+    width: 259px;
+    border: 3px solid #F5BD41;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#people {
+    width: 314px;
+    padding-left: 24px;
+}
+
+.booking-button {
+    width: 192px;
+    border-radius: 8px;
+    background-color: #3077C6;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
 }
 
 .section-title {
