@@ -2,22 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>TripHouse</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/reset.css">
   </head>
   <body>
+  <div class="top-section">
+    <nav class="nav center-align">
+      <div class="sprite logo-icon"></div>
+      <div class="nav-container center-align">
+        <div class="nav-gap center-align">
+          <p class="nav-link underlined-link">Stays</p>
+          <p class="nav-link">Attractions</p>
+        </div>
+        <div class="nav-gap center-align">
+          <div class="sprite night-icon"></div>
+          <div class="sprite account-icon"></div>
+        </div>
+      </div>
+    </nav>
+    <div class="top-content">
+      <h2 class="content-title">Discover stays <br>to live, work or just relax</h2>
+      <div class="booking-hints">
+        <label for="city" class="booking-hint">Your destination or hotel name</label>
+        <label for="dates" class="booking-hint">Check-in — Check-out</label>
+      </div>
+      <form action="/" class="booking-container">
+        <input type="text" class="booking-input" name="city" id="city" value="New York">
+        <input type="text" class="booking-input" name="dates" id="dates" value="Tue 15 Sept — Sat 19 Sept">
+        <input type="text" class="booking-input" name="people" id="people" value="2 Adults — 0 Children — 1 Room">
+        <button class="booking-button">Search</button>
+      </form>
+      <div class="download-links">
+        <div class="sprite google-play"></div>
+        <div class="sprite app-store"></div>
+      </div>
+    </div>
+  </div>
     <div class="offer-section">
       <h2 class="section-title">What do we offer</h2>
       <hr class="highlited-divider" />
       <div class="offer-items">
         <div class="offer-item">
-          <img src="images/support.svg" alt="support" class="offer-image" />
+          <img src="images/icons/support.svg" alt="support" class="offer-image" />
           <p class="offer-title">Support 24/7</p>
         </div>
         <div class="offer-item">
           <img
-            src="images/communicate.svg"
+            src="images/icons/communicate.svg"
             alt="communication"
             class="offer-image"
           />
@@ -25,7 +58,7 @@
         </div>
         <div class="offer-item">
           <img
-            src="images/book-online.svg"
+            src="images/icons/book-online.svg"
             alt="book online"
             class="offer-image"
           />
@@ -33,7 +66,7 @@
         </div>
         <div class="offer-item">
           <img
-            src="images/reviews.svg"
+            src="images/icons/reviews.svg"
             alt="real reviews"
             class="offer-image"
           />
