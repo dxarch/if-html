@@ -4,6 +4,38 @@ body {
     color: #383838;
 }
 
+.icon_hidden {
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.icon__logo {
+    width: 205px;
+    height: 40px;
+}
+
+.icon__night {
+    width: 30px;
+    height: 30px;
+}
+
+.icon__account {
+    width: 40px;
+    height: 40px;
+}
+
+.icon__google-play {
+    width: 135px;
+    height: 40px;
+}
+
+.icon__app-store {
+    width: 120px;
+    height: 40px;
+}
+
 .top-section {
     min-height: 100vh;
     background-image: url(../images/background-castle.png);
@@ -46,29 +78,6 @@ body {
 .center-align {
     display: flex;
     align-items: center;
-}
-
-.sprite {
-    background-image: url(../images/sprites/top-sprite.png);
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 33.33%;
-}
-
-.sprite.logo-icon {
-    width: 205px;
-    background-position: 0 0;
-}
-
-.sprite.night-icon {
-    width: 30px;
-    height: 30px;
-    background-position: -205px -6px;
-}
-
-.sprite.account-icon {
-    width: 40px;
-    background-position: -235px;
 }
 
 .top-content {
@@ -118,16 +127,6 @@ body {
     display: flex;
     gap: 16px;
     margin: 0 auto;
-}
-
-.sprite.google-play {
-    width: 135px;
-    background-position: -275px;
-}
-
-.sprite.app-store {
-    width: 120px;
-    background-position: -410px;
 }
 
 #city {
@@ -195,7 +194,7 @@ body {
     margin-left: 16px;
 }
 
-.offer-image {
+.offer-icon {
     width: 100px;
     height: 100px;
     margin-bottom: 48px;
