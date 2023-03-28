@@ -4,6 +4,38 @@ body {
     color: #383838;
 }
 
+.icon_hidden {
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.icon__logo {
+    width: 205px;
+    height: 40px;
+}
+
+.icon__night {
+    width: 30px;
+    height: 30px;
+}
+
+.icon__account {
+    width: 40px;
+    height: 40px;
+}
+
+.icon__google-play {
+    width: 135px;
+    height: 40px;
+}
+
+.icon__app-store {
+    width: 120px;
+    height: 40px;
+}
+
 .top-section {
     min-height: 100vh;
     background-image: url(../images/background-castle.png);
@@ -19,11 +51,11 @@ body {
     justify-content: space-between;
 }
 
-.nav-container {
+.--gap_48 {
     gap: 48px;
 }
 
-.nav-gap {
+.--gap_24 {
     gap: 24px
 }
 
@@ -32,7 +64,7 @@ body {
     font-weight: 400;
 }
 
-.underlined-link::after {
+.nav-link--underlined::after {
     content: '';
     display: block;
     position: relative;
@@ -43,32 +75,9 @@ body {
     background-color: #F5BD41;
 }
 
-.center-align {
+.--center-align {
     display: flex;
     align-items: center;
-}
-
-.sprite {
-    background-image: url(../images/sprites/top-sprite.png);
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 33.33%;
-}
-
-.sprite.logo-icon {
-    width: 205px;
-    background-position: 0 0;
-}
-
-.sprite.night-icon {
-    width: 30px;
-    height: 30px;
-    background-position: -205px -6px;
-}
-
-.sprite.account-icon {
-    width: 40px;
-    background-position: -235px;
 }
 
 .top-content {
@@ -77,7 +86,7 @@ body {
     padding-bottom: 120px;
 }
 
-.content-title {
+.top-content__title {
     width: 542px;
     height: 118px;
     font-weight: 500;
@@ -92,12 +101,12 @@ body {
     gap: 221px;
 }
 
-.booking-hint {
+.booking-hints__hint {
     font-weight: 400;
     font-size: 18px;
 }
 
-.booking-container {
+.booking-form {
     display: flex;
     max-width: 1223px;
     height: 64px;
@@ -106,28 +115,28 @@ body {
     margin-bottom: 120px;
 }
 
-.booking-input {
+.booking-form__input {
     border-radius: 8px;
     font-weight: 400;
     font-size: 18px;
 }
 
-.download-links {
+.booking-form__button {
+    width: 192px;
+    border-radius: 8px;
+    background-color: #3077C6;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.download {
     width: 271px;
     height: 40px;
     display: flex;
     gap: 16px;
     margin: 0 auto;
-}
-
-.sprite.google-play {
-    width: 135px;
-    background-position: -275px;
-}
-
-.sprite.app-store {
-    width: 120px;
-    background-position: -410px;
 }
 
 #city {
@@ -148,17 +157,7 @@ body {
     padding-left: 24px;
 }
 
-.booking-button {
-    width: 192px;
-    border-radius: 8px;
-    background-color: #3077C6;
-    color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-}
-
-.section-title {
+.offer-section__title {
     font-size: 40px;
     font-weight: 500;
     line-height: 47px;
@@ -167,7 +166,7 @@ body {
     margin-bottom: 20px;
 }
 
-.highlited-divider {
+.divider--highlighted {
     border: none;
     width: 100px;
     height: 4px;
@@ -185,23 +184,23 @@ body {
     margin-bottom: 120px;
 }
 
-.offer-item {
+.offer-items__item {
     display: inline-block;
     width: 296px;
     text-align: center;
 }
 
-.offer-item + .offer-item {
+.offer-items__item + .offer-items__item {
     margin-left: 16px;
 }
 
-.offer-image {
+.offer-items__icon {
     width: 100px;
     height: 100px;
     margin-bottom: 48px;
 }
 
-.offer-title {
+.offer-items__title {
     margin: 0 auto;
 }
 
@@ -210,7 +209,7 @@ body {
     color: #FFFFFF;
 }
 
-.footer-container {
+.footer__container {
     display: flex;
     padding: 120px 272px 64px 104px;
     gap: 16px;
@@ -225,18 +224,18 @@ body {
     list-style-type: none;
 }
 
-.footer-title {
+.footer-item__title {
     font-weight: 500;
     font-size: 20px;
 }
 
-.footer-link {
+.footer-item__link {
     text-decoration: none;
     font-size: 20px;
     color: #FFFFFF;
 }
 
-.copyright {
+.footer-copyright {
     padding-left: 105px;
     padding-bottom: 120px;
     font-size: 14px;
