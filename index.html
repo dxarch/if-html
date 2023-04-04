@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>TripHouse</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/fonts.css">
@@ -9,7 +10,7 @@
     <link rel="icon" href="images/favicon.svg" type="image/x-icon">
   </head>
   <body>
-  <svg class="icon icon_hidden" xmlns="http://www.w3.org/2000/svg">
+  <svg class="icon icon--hidden" xmlns="http://www.w3.org/2000/svg">
     <symbol id="google-play" viewBox="0 0 135 40">
       <path d="M130 39.9999H5C2.25 39.9999 0 37.75 0 35V4.99999C0 2.25 2.25 0 5 0H130C132.75 0 135 2.25 135 4.99999V35C135 37.75 132.75 39.9999 130 39.9999Z" fill="black"/>
       <path d="M130 0.799999C132.32 0.799999 134.2 2.68 134.2 4.99999V35C134.2 37.32 132.32 39.1999 130 39.1999H5C2.68 39.1999 0.8 37.32 0.8 35V4.99999C0.8 2.68 2.68 0.799999 5 0.799999H130ZM130 0H5C2.25 0 0 2.25 0 4.99999V35C0 37.75 2.25 39.9999 5 39.9999H130C132.75 39.9999 135 37.75 135 35V4.99999C135 2.25 132.75 0 130 0Z" fill="#A6A6A6"/>
@@ -58,107 +59,120 @@
       </defs>
     </symbol>
   </svg>
-  <section class="top-section">
-    <nav class="nav --center-align">
-      <svg class="icon icon__logo">
-        <use href="images/sprites/icons.svg#logo"></use>
-      </svg>
-      <div class="nav-items --gap_48 --center-align">
-        <div class="nav-items__links --gap_24 --center-align">
-          <p class="nav-link nav-link--underlined">Stays</p>
-          <p class="nav-link">Attractions</p>
+
+  <section class="top">
+    <div class="wrapper wrapper--top">
+      <nav class="nav center-align col-lg-12">
+        <svg class="icon icon__logo icon__logo--blue">
+          <use href="images/sprites/icons.svg#logo"></use>
+        </svg>
+        <div class="nav__menu nav--gap_48 center-align">
+          <div class="nav__links nav--gap_24 center-align">
+            <p class="nav__link nav__link--underlined nav__link--fs_24">Stays</p>
+            <p class="nav__link nav__link--fs_24">Attractions</p>
+          </div>
+          <div class="nav__icons nav--gap_24 center-align">
+            <svg class="icon icon__night">
+              <use href="images/sprites/icons.svg#night"></use>
+            </svg>
+            <svg class="icon icon__account">
+              <use href="images/sprites/icons.svg#account"></use>
+            </svg>
+          </div>
         </div>
-        <div class="nav-items__icons --gap_24 --center-align">
-          <svg class="icon icon__night">
-            <use href="images/sprites/icons.svg#night"></use>
-          </svg>
-          <svg class="icon icon__account">
-            <use href="images/sprites/icons.svg#account"></use>
-          </svg>
+      </nav>
+      <div class="booking col-lg-12">
+        <div class="booking__header booking__header--mb">
+          <h2 class="booking__title">Discover stays</h2>
+          <h2 class="booking__title">to live, work or just relax</h2>
         </div>
-      </div>
-    </nav>
-    <div class="top-content">
-      <h2 class="top-content__title">Discover stays <br>to live, work or just relax</h2>
-      <div class="booking-hints">
-        <label for="city" class="booking-hints__hint">Your destination or hotel name</label>
-        <label for="dates" class="booking-hints__hint">Check-in — Check-out</label>
-      </div>
-      <form action="/" class="booking-form">
-        <input type="text" class="booking-form__input" name="city" id="city" value="New York">
-        <input type="text" class="booking-form__input" name="dates" id="dates" value="Tue 15 Sept — Sat 19 Sept">
-        <input type="text" class="booking-form__input" name="people" id="people" value="2 Adults — 0 Children — 1 Room">
-        <button class="booking-form__button">Search</button>
-      </form>
-      <div class="download">
-        <a href="#" class="download__link">
-          <svg class="icon icon__google-play">
-            <use href="#google-play"></use>
-          </svg>
-        </a>
-        <a href="#" class="download__link">
-          <svg class="icon icon__app-store">
-            <use href="images/sprites/icons.svg#app-store"></use>
-          </svg>
-        </a>
+        <div class="booking__labels">
+          <label for="city" class="booking__hint">Your destination or hotel name</label>
+          <label for="dates" class="booking__hint">Check-in — Check-out</label>
+        </div>
+        <form action="/" class="booking-form col-lg-12">
+          <input type="text" class="booking-form__input col-lg-4 col-md-3" name="city" id="city" value="New York">
+          <input type="text" class="booking-form__input col-lg-3" name="dates" id="dates" value="Tue 15 Sept — Sat 19 Sept">
+          <input type="text" class="booking-form__input col-lg-3 col-md-4" name="people" id="people" value="2 Adults — 0 Children — 1 Room">
+          <button class="booking-form__button col-lg-2">Search</button>
+        </form>
+        <div class="download">
+          <a href="#" class="download__link">
+            <svg class="icon icon__google-play">
+              <use href="#google-play"></use>
+            </svg>
+          </a>
+          <a href="#" class="download__link">
+            <svg class="icon icon__app-store">
+              <use href="images/sprites/icons.svg#app-store"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
-    <section class="offer-section">
-      <h2 class="offer-section__title">What do we offer</h2>
-      <hr class="divider--highlighted" />
-      <div class="offer-items">
-        <div class="offer-items__item">
-          <svg class="offer-items__icon offer-items__icon--support">
-            <use href="images/sprites/icons.svg#support"></use>
-          </svg>
-          <p class="offer-items__title">Support 24/7</p>
-        </div>
-        <div class="offer-items__item">
-          <svg class="offer-items__icon offer-items__icon--communicate">
-            <use href="images/sprites/icons.svg#communicate"></use>
-          </svg>
-          <p class="offer-items__title">Communicate directly</p>
-        </div>
-        <div class="offer-items__item">
-          <svg class="offer-items__icon offer-items__icon--book">
-            <use href="images/sprites/icons.svg#book-online"></use>
-          </svg>
-          <p class="offer-items__title">Book online</p>
-        </div>
-        <div class="offer-items__item">
-          <svg class="offer-items__icon offer-items__icon--reviews">
-            <use href="images/sprites/icons.svg#reviews"></use>
-          </svg>
-          <p class="offer-items__title">Real guest reviews</p>
+    <section class="offer">
+      <div class="offer__wrapper wrapper">
+        <h2 class="offer__heading col-sm-4">What do we offer</h2>
+        <hr class="offer__divider offer__divider--highlighted" />
+        <div class="offer__block offer__block--gap_16">
+          <div class="offer__item col-lg-3 col-sm-4">
+            <svg class="offer__icon offer__icon--support">
+              <use href="images/sprites/icons.svg#support"></use>
+            </svg>
+            <p class="offer__desc">Support 24/7</p>
+          </div>
+          <div class="offer__item col-lg-3 col-sm-4">
+            <svg class="offer__icon offer__icon--communicate">
+              <use href="images/sprites/icons.svg#communicate"></use>
+            </svg>
+            <p class="offer__desc">Communicate directly</p>
+          </div>
+          <div class="offer__item col-lg-3 col-sm-4">
+            <svg class="offer__icon offer__icon--book">
+              <use href="images/sprites/icons.svg#book-online"></use>
+            </svg>
+            <p class="offer__desc">Book online</p>
+          </div>
+          <div class="offer__item col-lg-3 col-sm-4">
+            <svg class="offer__icon offer__icon--reviews">
+              <use href="images/sprites/icons.svg#reviews"></use>
+            </svg>
+            <p class="offer__desc">Real guest reviews</p>
+          </div>
         </div>
       </div>
     </section>
-  <div class="footer">
-    <div class="footer__container">
-      <ul class="footer-item">
-        <li class="footer-item__title">About</li>
-        <li><a href="#" class="footer-item__link">How Triphouse works</a></li>
-        <li><a href="#" class="footer-item__link">Careers</a></li>
-        <li><a href="#" class="footer-item__link">Privacy</a></li>
-        <li><a href="#" class="footer-item__link">Terms</a></li>
-      </ul>
-      <ul class="footer-item">
-        <li class="footer-item__title">Property types</li>
-        <li><a href="#" class="footer-item__link">Guest houses</a></li>
-        <li><a href="#" class="footer-item__link">Hotels</a></li>
-        <li><a href="#" class="footer-item__link">Apartments</a></li>
-        <li><a href="#" class="footer-item__link">Villas</a></li>
-        <li><a href="#" class="footer-item__link">Holiday homes</a></li>
-        <li><a href="#" class="footer-item__link">Hostels</a></li>
-      </ul>
-      <ul class="footer-item">
-        <li class="footer-item__title">Support</li>
-        <li><a href="#" class="footer-item__link">Contact Customer Service</a></li>
-        <li><a href="#" class="footer-item__link">FAQ</a></li>
-      </ul>
+  <footer class="footer">
+    <div class="footer__wrapper wrapper">
+      <svg class="footer__icon footer__icon--white icon--hidden">
+        <use href="images/sprites/icons.svg#logo"></use>
+      </svg>
+      <div class="footer__block col-sm-4">
+        <ul class="footer__list col-lg-4">
+          <li class="footer__title">About</li>
+          <li><a href="#" class="footer__link">How Triphouse works</a></li>
+          <li><a href="#" class="footer__link">Careers</a></li>
+          <li><a href="#" class="footer__link">Privacy</a></li>
+          <li><a href="#" class="footer__link">Terms</a></li>
+        </ul>
+        <ul class="footer__list col-lg-4">
+          <li class="footer__title">Property types</li>
+          <li><a href="#" class="footer__link">Guest houses</a></li>
+          <li><a href="#" class="footer__link">Hotels</a></li>
+          <li><a href="#" class="footer__link">Apartments</a></li>
+          <li><a href="#" class="footer__link">Villas</a></li>
+          <li><a href="#" class="footer__link">Holiday homes</a></li>
+          <li><a href="#" class="footer__link">Hostels</a></li>
+        </ul>
+        <ul class="footer__list col-lg-4">
+          <li class="footer__title">Support</li>
+          <li><a href="#" class="footer__link">Contact Customer Service</a></li>
+          <li><a href="#" class="footer__link">FAQ</a></li>
+        </ul>
+      </div>
+      <p class="footer__copyright col-sm-4">© 2022 Triphouse, Inc. All rights reserved</p>
     </div>
-    <p class="footer__copyright">© 2022Triphouse, Inc. All rights reserved</p>
-  </div>
+  </footer>
   </body>
 </html>
