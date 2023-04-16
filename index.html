@@ -55,16 +55,16 @@
 
   <section class="top">
     <div class="wrapper wrapper--top">
-      <nav class="nav center-align col-lg-12">
+      <nav class="nav --center-align col-lg-12">
         <svg class="icon icon__logo icon__logo--blue">
           <use href="images/sprites/icons.svg#logo"></use>
         </svg>
-        <div class="nav__menu nav--gap_48 center-align">
-          <div class="nav__links nav--gap_24 center-align --hidden">
+        <div class="nav__menu nav--gap_48 --center-align">
+          <div class="nav__links nav--gap_24 --center-align --hidden">
             <p class="nav__link nav__link--underlined nav__link--fs_24">Stays</p>
             <p class="nav__link nav__link--fs_24">Attractions</p>
           </div>
-          <div class="nav__icons nav--gap_24 center-align">
+          <div class="nav__icons nav--gap_24 --center-align">
             <svg class="icon icon__night">
               <use href="images/sprites/icons.svg#night"></use>
             </svg>
@@ -82,49 +82,43 @@
           <h2 class="booking__title">Discover stays</h2>
           <h2 class="booking__title">to live, work or just relax</h2>
         </div>
-        <div class="booking__desktop">
+        <div class="booking__block">
           <div class="booking__labels">
             <label for="city" class="booking__hint">Your destination or hotel name</label>
-            <label for="dates" class="booking__hint">Check-in — Check-out</label>
+            <label for="check-in" class="booking__hint">Check-in — Check-out</label>
           </div>
-          <form action="/" class="booking-form col-lg-12">
-            <input type="text" class="booking-form__input col-lg-4 col-md-3" name="city" id="city" value="New York">
-            <input type="text" class="booking-form__input col-lg-3" name="dates" id="dates" value="Tue 15 Sept — Sat 19 Sept">
-            <input type="text" class="booking-form__input col-lg-3 col-md-4" name="people" id="people" value="2 Adults — 0 Children — 1 Room">
-            <button class="booking-form__button col-lg-2">Search</button>
-          </form>
-        </div>
-        <div class="booking__mobile">
-          <form action="/" class="booking-form --hidden">
-            <div class="label__wrap--city">
-              <svg class="icon icon__search">
+          <form action="/" class="booking__form">
+            <div class="label__wrap label__wrap--city col-lg-4 col-md-3">
+              <svg class="icon icon__search --hidden">
                 <use href="images/sprites/icons.svg#search"></use>
               </svg>
-              <input type="text" class="booking-form__input" name="city" id="city" value="Your destination or hotel name">
+              <input type="text" class="booking__input booking__form--text" name="city" id="city" placeholder="New York">
             </div>
-            <div class="label__wrap--fs_12 label__wrap--date">
-              <label for="check-in" class="label__booking label__booking--padding label__booking--date">Check-in date</label>
-              <input type="text" class="booking-form__input booking-form__input--padding" name="check-in" id="check-in" value="Tue 15 Sept 2020">
-            </div>
-            <div class="label__wrap--fs_12 label__wrap--date">
-              <label for="check-out" class="label__booking label__booking--padding label__booking--date">Check-out date</label>
-              <input type="text" class="booking-form__input booking-form__input--padding" name="check-out" id="check-out" value="Sat 19 Sept 2020">
-            </div>
-            <div class="people">
-              <div class="label__wrap--fs_12 label__wrap--people">
-                <label for="adults" class="label__booking label__booking--padding">Adults</label>
-                <input type="text" name="adults" id="adults" class="booking-form__input booking-form__input--padding" value="2">
+            <div class="booking__dates col-lg-3 col-md-3">
+              <div class="label__wrap label__wrap--date label__wrap--horiz-div">
+                <label for="check-in" class="label__booking label__booking--padding label__booking--date --hidden">Check-in</label>
+                <div class="booking__input booking__input--date booking__form--text --text-right" id="check-in">Tue 15 Sept</div>
               </div>
-              <div class="label__wrap--fs_12 label__wrap--people">
-                <label for="children" class="label__booking label__booking--padding">Children</label>
-                <input type="text" name="children" id="children" class="booking-form__input booking-form__input--padding" value="0">
-              </div>
-              <div class="label__wrap--fs_12 label__wrap--people">
-                <label for="rooms" class="label__booking label__booking--padding">Rooms</label>
-                <input type="text" name="rooms" id="rooms" class="booking-form__input booking-form__input--padding" value="1">
+              <div class="label__wrap label__wrap--date">
+                <label for="check-out" class="label__booking label__booking--padding label__booking--date --hidden">Check-out</label>
+                <div class="booking__input booking__form--text --text-left" id="check-out">Sat 19 Sept</div>
               </div>
             </div>
-            <button class="booking-form__button">Search</button>
+            <div class="booking__people col-lg-3 col-md-3">
+              <div class="label__wrap label__wrap--people label__wrap--vertical-line label__wrap--horiz-div">
+                <label for="adults" class="label__booking">Adults</label>
+                <div id="adults" class="booking__input booking__form--text --text-right --trailing-space">2</div>
+              </div>
+              <div class="label__wrap label__wrap--people label__wrap--vertical-line label__wrap--horiz-div">
+                <label for="children" class="label__booking">Children</label>
+                <div id="children" class="booking__input booking__form--text --text-center --trailing-space">0</div>
+              </div>
+              <div class="label__wrap label__wrap--people">
+                <label for="rooms" class="label__booking">Rooms</label>
+                <div id="rooms" class="booking__input booking__form--text --text-left --trailing-space">1</div>
+              </div>
+            </div>
+            <button class="booking__button col-lg-2 col-md-2">Search</button>
           </form>
         </div>
         <div class="download">
@@ -144,7 +138,7 @@
   </section>
     <section class="offer">
       <div class="offer__wrapper wrapper">
-        <h2 class="offer__heading col-sm-4">What do we offer</h2>
+        <h2 class="offer__heading --text-center col-sm-4">What do we offer</h2>
         <hr class="offer__divider offer__divider--highlighted" />
         <div class="offer__block offer__block--gap_16">
           <div class="offer__item col-lg-3 col-sm-4">
@@ -180,14 +174,14 @@
         <use href="images/sprites/icons.svg#logo"></use>
       </svg>
       <div class="footer__block col-sm-4">
-        <ul class="footer__list col-lg-4">
+        <ul class="footer__list --text-left col-lg-4">
           <li class="footer__title">About</li>
           <li><a href="#" class="footer__link">How Triphouse works</a></li>
           <li><a href="#" class="footer__link">Careers</a></li>
           <li><a href="#" class="footer__link">Privacy</a></li>
           <li><a href="#" class="footer__link">Terms</a></li>
         </ul>
-        <ul class="footer__list col-lg-4">
+        <ul class="footer__list --text-left col-lg-4">
           <li class="footer__title">Property types</li>
           <li><a href="#" class="footer__link">Guest houses</a></li>
           <li><a href="#" class="footer__link">Hotels</a></li>
@@ -196,7 +190,7 @@
           <li><a href="#" class="footer__link">Holiday homes</a></li>
           <li><a href="#" class="footer__link">Hostels</a></li>
         </ul>
-        <ul class="footer__list col-lg-4">
+        <ul class="footer__list --text-left col-lg-4">
           <li class="footer__title">Support</li>
           <li><a href="#" class="footer__link">Contact Customer Service</a></li>
           <li><a href="#" class="footer__link">FAQ</a></li>
