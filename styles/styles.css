@@ -210,6 +210,10 @@ body {
     padding-left: 22px;
 }
 
+#rooms {
+    flex-grow: 0;
+}
+
 .booking__input::placeholder {
     font-weight: 400;
     font-size: 18px;
@@ -444,10 +448,6 @@ body {
     .booking__input::placeholder,
     .booking__hint {
         font-size: 14px;
-    }
-
-    #rooms {
-        flex-grow: revert;
     }
 
     .booking__button,
