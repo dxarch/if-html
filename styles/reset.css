@@ -7,3 +7,11 @@
 input, button {
     border: none;
 }
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
