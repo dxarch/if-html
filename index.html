@@ -60,10 +60,10 @@
           <use href="images/sprites/icons.svg#logo"></use>
         </svg>
         <div class="nav__menu nav--gap_48 --center-align">
-          <div class="nav__links nav--gap_24 --center-align">
-            <a href="#" class="nav__link nav__link--fs_24">Stays</a>
-            <a href="#" class="nav__link nav__link--fs_24">Attractions</a>
-          </div>
+          <ul class="nav__links nav--gap_24 --center-align">
+            <li><a href="#" class="nav__link nav__link--fs_24">Stays</a></li>
+            <li><a href="#" class="nav__link nav__link--fs_24">Attractions</a></li>
+          </ul>
           <div class="nav__icons nav--gap_24 --center-align">
             <svg class="icon icon__night">
               <use href="images/sprites/icons.svg#night"></use>
@@ -170,35 +170,96 @@
   <section class="homes wrapper wrapper--homes">
     <h2 class="heading heading--homes">Homes guests love</h2>
     <div class="homes__block col-lg-12">
-      <div class="homes__slides">
-        <figure class="homes__item col-lg-3 col-sm-3">
-          <img src="images/homes/hotel_leopold.png" alt="Hotel Leopold" class="homes__image">
-          <figcaption class="homes__caption homes__caption--primary">Hotel Leopold</figcaption>
-          <p class="homes__caption homes__caption--secondary">Saint Petersburg, Russia</p>
+      <div class="slides homes__slides">
+        <figure class="slides__item col-lg-3 col-sm-3">
+          <img src="images/homes/hotel_leopold.png" alt="Hotel Leopold" class="slides__image">
+          <figcaption class="slides__caption slides__caption--primary">Hotel Leopold</figcaption>
+          <p class="slides__caption slides__caption--secondary">Saint Petersburg, Russia</p>
         </figure>
-        <figure class="homes__item col-lg-3 col-sm-3">
-          <img src="images/homes/apartment_sunshine.png" alt="Apartment Sunshine" class="homes__image">
-          <figcaption class="homes__caption homes__caption--primary">Apartment Sunshine</figcaption>
-          <p class="homes__caption homes__caption--secondary">Santa  Cruz de Tenerife, Spain</p>
+        <figure class="slides__item col-lg-3 col-sm-3">
+          <img src="images/homes/apartment_sunshine.png" alt="Apartment Sunshine" class="slides__image">
+          <figcaption class="slides__caption slides__caption--primary">Apartment Sunshine</figcaption>
+          <p class="slides__caption slides__caption--secondary">Santa  Cruz de Tenerife, Spain</p>
         </figure>
-        <figure class="homes__item col-lg-3 col-sm-3">
-          <img src="images/homes/villa_kunerad.png" alt="Villa Kunerad" class="homes__image">
-          <figcaption class="homes__caption homes__caption--primary">Villa Kunerad</figcaption>
-          <p class="homes__caption homes__caption--secondary">Vysokie Tatry, Slowakia</p>
+        <figure class="slides__item col-lg-3 col-sm-3">
+          <img src="images/homes/villa_kunerad.png" alt="Villa Kunerad" class="slides__image">
+          <figcaption class="slides__caption slides__caption--primary">Villa Kunerad</figcaption>
+          <p class="slides__caption slides__caption--secondary">Vysokie Tatry, Slowakia</p>
         </figure>
-        <figure class="homes__item col-lg-3">
-          <img src="images/homes/hotel_friendship.png" alt="Hostel Friendship" class="homes__image">
-          <figcaption class="homes__caption homes__caption--primary">Hostel Friendship</figcaption>
-          <p class="homes__caption homes__caption--secondary">Berlin, Germany</p>
+        <figure class="slides__item col-lg-3 col-sm-3">
+          <img src="images/homes/hotel_friendship.png" alt="Hostel Friendship" class="slides__image">
+          <figcaption class="slides__caption slides__caption--primary">Hostel Friendship</figcaption>
+          <p class="slides__caption slides__caption--secondary">Berlin, Germany</p>
         </figure>
-        <span class="homes__arrow homes__arrow--right">
-          <svg class="arrow-right__icon">
+        <span class="slides__arrow slides__arrow--right">
+          <svg class="arrow__icon">
             <use href="images/sprites/icons.svg#arrow-right"></use>
           </svg>
         </span>
       </div>
     </div>
   </section>
+  <section class="destinations">
+    <div class="wrapper wrapper--destinations">
+      <h2 class="heading">The best destinations</h2>
+      <div class="destinations__tabs col-lg-6 col-md-6 col-sm-6">
+        <div class="destinations__tab destinations__tab--selected">
+          <p>Regions</p>
+        </div>
+        <div class="destinations__tab">
+          <p>Cities</p>
+        </div>
+        <div class="destinations__tab">
+          <p class="desktop">Places of interest</p>
+          <p class="mobile">Places</p>
+        </div>
+      </div>
+      <div class="slides destinations__slides col-lg-12">
+        <figure class="slides__item col-lg-3 col-sm-3">
+          <img src="./images/destinations/maldives.png" alt="Maldives" class="slides__image">
+          <figcaption class="slides__caption slides__caption--primary">Maldives</figcaption>
+        </figure>
+        <figure class="slides__item col-lg-3 col-sm-3">
+          <img src="./images/destinations/spain.png" alt="Spain" class="slides__image">
+          <figcaption class="slides__caption slides__caption--primary">Spain</figcaption>
+        </figure>
+        <figure class="slides__item col-lg-3 col-sm-3">
+          <img src="./images/destinations/norway.png" alt="Norway" class="slides__image">
+          <figcaption class="slides__caption slides__caption--primary">Norway</figcaption>
+        </figure>
+        <figure class="slides__item col-lg-3 col-sm-3">
+          <img src="./images/destinations/iceland.png" alt="Iceland" class="slides__image">
+          <figcaption class="slides__caption slides__caption--primary">Iceland</figcaption>
+        </figure>
+        <span class="slides__arrow destinations__arrow">
+            <svg class="arrow__icon arrow__icon--down">
+              <use href="images/sprites/icons.svg#arrow-down"></use>
+            </svg>
+        </span>
+      </div>
+    </div>
+  </section>
+  <div class="wrapper wrapper--sign-up">
+    <section class="sign-up col-lg-12 col-sm-6">
+      <span class="sign-up__user">
+          <svg class="sign-up__icon">
+            <use href="images/sprites/icons.svg#user"></use>
+          </svg>
+      </span>
+      <div class="sign-up__offer">
+        <svg class="close__icon">
+          <use href="images/sprites/icons.svg#close"></use>
+        </svg>
+        <svg class="sign-up__icon sign-up__icon--app">
+          <use href="images/sprites/icons.svg#triphouse-app"></use>
+        </svg>
+        <p class="sign-up__title-desktop">Sign up and get 20% off your first booking</p>
+        <p class="sign-up__title-mobile col-sm-3">Sign up in the app and get 20% off your first booking</p>
+        <button class="sign-up__button">Sign up</button>
+        <a href="#" class="sign-up__install">Install</a>
+      </div>
+    </section>
+  </div>
   <footer class="footer">
     <div class="footer__wrapper wrapper">
       <svg class="footer__icon footer__icon--white --hidden">
