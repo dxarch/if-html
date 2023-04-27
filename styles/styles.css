@@ -2,6 +2,16 @@
     --col-width: calc(100% / 12);
     --col-md-width: calc(100% / 10);
     --col-sm-width: calc(100% / 6);
+
+    --gap-lg: 16px;
+    --gap-sm: 8px;
+
+
+    --white: #FFFFFF;
+    --main-text: #383838;
+    --accent-yellow: #F5BD41;
+    --general-blue: #10367C;
+    --secondary-text: #BFBFBF;
 }
 
 .col-lg-1 {
@@ -55,7 +65,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: #383838;
+    color: var(--main-text);
 }
 
 .icon__google-play--top {
@@ -130,7 +140,7 @@ body {
     background-image: url(../images/background-castle.png);
     background-repeat: no-repeat;
     background-size: cover;
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 .wrapper--top {
@@ -145,11 +155,11 @@ body {
 }
 
 .nav--gap_48 {
-    gap: 48px;
+    gap: calc(var(--gap-lg) * 3);
 }
 
 .nav--gap_24 {
-    gap: 24px
+    gap: calc(var(--gap-lg) * 1.5);
 }
 
 .nav__link--fs_24 {
@@ -165,24 +175,25 @@ body {
     margin: 0 auto;
     height: 3px;
     width: 50px;
-    background-color: #F5BD41;
+    background-color: var(--accent-yellow);
 }
 
 .booking__form {
     display: flex;
     height: 64px;
-    gap: 16px;
-    background: #FFFFFF;
+    gap: var(--gap-lg);
+    background: var(--white);
     border-radius: 8px;
     margin-bottom: 120px;
 }
 
 .label__wrap {
     display: flex;
+    align-items: center;
 }
 
 .label__booking {
-    color: #383838;
+    color: var(--main-text);
     font-size: 18px;
     order: 2;
 }
@@ -193,7 +204,7 @@ body {
     padding: 0 3px 0;
     font-weight: 400;
     font-size: 18px;
-    color: #383838;
+    color: var(--main-text);
 }
 
 .label__wrap--city:after {
@@ -217,14 +228,14 @@ body {
 .booking__input::placeholder {
     font-weight: 400;
     font-size: 18px;
-    color: #383838;
+    color: var(--main-text);
 }
 
 .booking__dates {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid #F5BD41;
+    border: 3px solid var(--accent-yellow);
     border-radius: 8px;
 }
 
@@ -232,11 +243,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.label__wrap--people {
-    align-items: center;
-    width: 100%;
 }
 
 .booking__header--mb {
@@ -264,13 +270,13 @@ body {
 .booking__form--text {
     font-weight: 400;
     font-size: 18px;
-    color: #383838;
+    color: var(--main-text);
 }
 
 .booking__button {
     border-radius: 8px;
     background-color: #3077C6;
-    color: #FFFFFF;
+    color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 24px;
@@ -280,7 +286,7 @@ body {
     width: 271px;
     height: 40px;
     display: flex;
-    gap: 16px;
+    gap: var(--gap-lg);
     margin: 0 auto;
 }
 
@@ -300,7 +306,7 @@ body {
 }
 
 .offer__divider--highlighted {
-    background: #F5BD41;
+    background: var(--accent-yellow);
 }
 
 .offer__block {
@@ -310,7 +316,7 @@ body {
 }
 
 .offer__block--gap_16 {
-    gap: 16px;
+    gap: var(--gap-lg);
 }
 
 .offer__item {
@@ -334,8 +340,8 @@ body {
 }
 
 .footer {
-    background: #10367C;
-    color: #FFFFFF;
+    background: var(--general-blue);
+    color: var(--white);
 }
 
 .wrapper--footer {
@@ -346,13 +352,13 @@ body {
 .footer__block {
     display: flex;
     margin-bottom: 64px;
-    gap: 16px;
+    gap: var(--gap-lg);
 }
 
 .footer__list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: calc(var(--gap-lg) * 1.5);
     list-style-type: none;
 }
 
@@ -364,7 +370,7 @@ body {
 .footer__link {
     text-decoration: none;
     font-size: 20px;
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 .footer__copyright {
@@ -439,10 +445,6 @@ body {
         gap: 20%;
     }
 
-    .label__wrap--date {
-        align-items: center;
-    }
-
     .booking__input,
     .label__booking,
     .booking__input::placeholder,
@@ -504,7 +506,7 @@ body {
     }
 
     .nav__icons {
-        gap: 16px;
+        gap: calc(var(--gap-sm) * 2);
     }
 
     .icon__logo {
@@ -545,9 +547,9 @@ body {
         height: auto;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        gap: 8px 8px;
+        gap: var(--gap-sm) var(--gap-sm);
         padding: 8px;
-        background: #F5BD41;
+        background: var(--accent-yellow);
         border-radius: 0;
         margin-bottom: 35px;
     }
@@ -564,13 +566,13 @@ body {
     .booking__dates {
         border: none;
         width: 100%;
-        gap: 8px;
+        gap: var(--gap-sm);
         grid-row: 2;
         grid-column: span 6;
     }
 
     .booking__people {
-        background: #FFFFFF;
+        background: var(--white);
         border-radius: 8px;
         width: 100%;
         grid-row: 3;
@@ -581,7 +583,7 @@ body {
         display: flex;
         width: 100%;
         text-align: revert;
-        background-color: #FFFFFF;
+        background-color: var(--white);
         border-radius: 8px;
     }
 
@@ -593,13 +595,14 @@ body {
         display: block;
         order: revert;
         font-size: 12px;
-        color: #383838;
+        color: var(--main-text);
     }
 
-    .label__wrap--date {
+    .label__wrap--two-level {
+        position: relative;
         flex-direction: column;
         align-items: flex-start;
-        gap: 4px;
+        gap: calc(var(--gap-sm) / 2);
         padding: 6px 0 6px 8px;
     }
 
@@ -611,14 +614,6 @@ body {
         position: relative;
         grid-row: 1;
         grid-column: span 6;
-    }
-
-    .label__wrap--people {
-        position: relative;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        padding: 6px 0 6px 8px;
     }
 
     .label__wrap--horiz-div:after {
@@ -633,7 +628,7 @@ body {
         bottom: 8px;
         right: 0;
         padding: 0;
-        border-right: 1px solid #BFBFBF;
+        border-right: 1px solid var(--secondary-text);
     }
 
     .booking__button {
@@ -670,7 +665,7 @@ body {
     .offer__block {
         flex-direction: column;
         align-items: center;
-        gap: 32px;
+        gap: calc(var(--gap-lg) * 2);
         margin-bottom: 0;
     }
 
@@ -704,7 +699,7 @@ body {
     }
 
     .footer__icon--white {
-       fill: #FFFFFF;
+       fill: var(--white);
     }
 
     .footer__block {
@@ -717,7 +712,7 @@ body {
 
     .footer__list {
         width: fit-content;
-        gap: 16px;
+        gap: var(--gap-lg);
         height: 18px;
     }
 
