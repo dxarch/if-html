@@ -187,10 +187,6 @@ body {
     margin-bottom: 120px;
 }
 
-.label__wrap {
-    display: flex;
-    align-items: center;
-}
 
 .label__booking {
     color: var(--main-text);
