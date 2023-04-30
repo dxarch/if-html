@@ -387,7 +387,6 @@ body {
 .slides {
     display: flex;
     justify-content: center;
-    align-items: baseline;
     gap: 16px;
 }
 
@@ -437,7 +436,6 @@ body {
 
 .slides__image {
     max-width: 100%;
-    max-height: 296px;
     object-fit: cover;
     aspect-ratio: 1 / 1;
 }
@@ -555,6 +553,38 @@ body {
     border: 1px solid #3077C6;
 }
 
+.slides__item--reviews {
+    background-color: #EAF0F9;
+    max-width: 400px;
+}
+
+.slides__item--reviews :not(:last-child) {
+    margin-bottom: 0;
+}
+
+.reviews__image-wrap {
+    position: relative;
+    max-height: 400px;
+}
+
+.reviews__image {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.reviews__price {
+    height: 48px;
+    position: absolute;
+    width: 100%;
+    padding: 15px 0 15px 25px;
+    background-color: rgba(56, 56, 56, .7);
+    color: #FFFFFF;
+    font-size: 18px;
+    bottom: 0;
+}
 
 .footer {
     background: #10367C;
