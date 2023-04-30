@@ -168,13 +168,13 @@ body {
     font-weight: 400;
 }
 
-.nav__link--underlined::after {
+.nav__link:hover::after {
     content: '';
     display: block;
     position: relative;
     top: 8px;
     margin: 0 auto;
-    height: 3px;
+    height: 4px;
     width: 50px;
     background-color: var(--accent-yellow);
 }
@@ -287,19 +287,32 @@ body {
     margin: 0 auto;
 }
 
-.offer__heading {
+.heading {
     font-size: 40px;
     font-weight: 500;
+    text-align: center;
     line-height: 47px;
     word-break: break-all;
-    margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 105px;
 }
 
-.offer__divider {
-    border: none;
+.heading--offer {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.heading--offer::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 67px;
+    margin: 0 auto;
+    background-color: #F5BD41;
     width: 100px;
     height: 4px;
-    margin: 0 auto 80px;
 }
 
 .offer__divider--highlighted {
@@ -334,6 +347,73 @@ body {
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
+}
+
+.homes {
+    background-color: #EAF0F9;
+}
+
+.homes__slides {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 16px;
+    max-height: 435px;
+}
+
+.homes__item {
+    width: 100%;
+}
+
+.homes__arrow {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    top: 30%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+.homes__arrow--right {
+    right: -16px;
+}
+
+.homes__arrow--left {
+    right: calc(100% - 145px);;
+}
+
+.arrow-right__icon {
+    margin: auto;
+    width: 10px;
+    height: 20px;
+}
+
+.homes__item :not(:last-child){
+    margin-bottom: 25px;
+}
+
+.homes__image {
+    max-width: 100%;
+    max-height: 296px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.homes__caption {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.homes__caption--primary {
+    color: #3077C6;
+}
+
+.homes__caption--secondary {
+    color: #BFBFBF;
 }
 
 .footer {
@@ -452,6 +532,27 @@ body {
     .booking__button,
     .nav__link {
         font-size: 20px;
+    }
+
+    .wrapper--homes {
+        padding: 60px 80px;
+    }
+
+    .heading--homes {
+        margin-bottom: 60px;
+    }
+
+    .homes__item :not(:last-child){
+        margin-bottom: 10px;
+    }
+
+    .homes__caption {
+        font-size: 18px;
+        line-height: unset;
+    }
+
+    .homes__arrow {
+        top: 30%;
     }
 
     .offer__desc {
@@ -648,14 +749,12 @@ body {
         padding: 25px 70px 40px;
     }
 
-    .offer__heading {
-        font-size: 28px;
+    .heading--offer {
         margin-bottom: 32px;
         margin-top: 0;
-        width: 100%;
     }
 
-    .offer__divider--highlighted {
+    .heading--offer:after {
         display: none;
     }
 
@@ -682,15 +781,63 @@ body {
         text-align: center;
     }
 
+    .wrapper--homes {
+        padding: 40px 16px 56px;
+    }
+
+    .heading--homes {
+        font-size: 28px;
+        margin-bottom: 32px;
+        line-height: 33px;
+    }
+
+
+    .homes__item {
+        max-width: 296px;
+    }
+
+    .homes__image {
+        margin-bottom: 8px;
+        min-width: 156px;
+    }
+
+    .homes__item :not(:last-child){
+        margin-bottom: 4px;
+    }
+
+    .homes__item:nth-last-of-type(-n + 2) {
+        display: none;
+    }
+
+    .homes__caption {
+        font-size: 12px;
+    }
+
+    .arrow-right__icon {
+        width: 5px;
+        height: 15px;
+    }
+
+    .homes__arrow {
+        width: 28px;
+        height: 28px;
+        top: calc(var(--col-sm-width) * 3 - 28px);
+    }
+
+    .homes__arrow--right {
+        right: -12px;
+    }
+
     .footer__wrapper {
         padding: 40px 65px 30px;
         margin: 0 auto;
     }
 
     .footer__icon {
-        display: revert;
+        display: block;
         margin-bottom: 40px;
-        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
         width: 98px;
         height: 19px;
     }
@@ -730,5 +877,23 @@ body {
         max-width: 216px;
         font-size: 12px;
         padding-bottom: 0;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 910px) {
+    .homes__arrow {
+        top: calc(30% + 20px);
+    }
+
+    .homes__item:nth-last-of-type(-n + 2) {
+        display: block;
+    }
+
+    .homes__item:last-of-type {
+        display: none;
+    }
+
+    .homes__caption {
+        font-size: 16px;
     }
 }
