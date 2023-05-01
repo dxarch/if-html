@@ -1199,10 +1199,6 @@ body {
 }
 
 @media (min-width: 640px) and (max-width: 910px) {
-    /*.slides__arrow {*/
-    /*    top: calc(30% + 20px);*/
-    /*}*/
-
     .slides__item:nth-last-of-type(-n + 2) {
         display: block;
     }
