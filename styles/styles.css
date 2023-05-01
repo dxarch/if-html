@@ -67,8 +67,9 @@
     display: none;
 }
 
-
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     color: var(--main-text);
@@ -142,6 +143,7 @@ body {
 }
 
 .top {
+    order: 1;
     min-height: 100vh;
     background-image: url(../images/background-castle.png);
     background-repeat: no-repeat;
@@ -329,6 +331,10 @@ body {
     margin: 0 auto;
 }
 
+.offer {
+    order: 2;
+}
+
 .heading {
     font-size: 40px;
     font-weight: 500;
@@ -388,12 +394,14 @@ body {
 }
 
 .homes {
+    order: 3;
     background-color: #EAF0F9;
 }
 
 .slides {
+    max-width: 1232px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
     gap: 16px;
 }
 
@@ -459,6 +467,10 @@ body {
     color: #BFBFBF;
 }
 
+.destinations {
+    order: 4;
+}
+
 .destinations__tabs {
     display: flex;
     height: 64px;
@@ -495,9 +507,11 @@ body {
     position: absolute;
     top: revert;
     bottom: -50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     transform: translateY(-50%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
-    margin: 0 auto;
 }
 
 .sign-up {
@@ -511,6 +525,7 @@ body {
 }
 
 .wrapper--sign-up {
+    order: 5;
     padding: 0 105px;
 }
 
@@ -560,6 +575,10 @@ body {
     border: 1px solid #3077C6;
 }
 
+.reviews {
+    order: 6;
+}
+
 .slides__item--reviews {
     background-color: #EAF0F9;
     max-width: 400px;
@@ -594,6 +613,7 @@ body {
 }
 
 .footer {
+    order: 7;
     background: var(--general-blue);
     color: var(--white);
 }
@@ -1068,6 +1088,10 @@ body {
         font-size: 19px;
     }
 
+    .reviews {
+        order: 5;
+    }
+
     .sign-up {
         background-color: #FFFFFF;
         padding-left: 0;
@@ -1077,6 +1101,7 @@ body {
 
     .wrapper--sign-up {
         padding: 0 16px;
+        order: 6;
     }
 
     .close__icon {
@@ -1174,9 +1199,9 @@ body {
 }
 
 @media (min-width: 640px) and (max-width: 910px) {
-    .slides__arrow {
-        top: calc(30% + 20px);
-    }
+    /*.slides__arrow {*/
+    /*    top: calc(30% + 20px);*/
+    /*}*/
 
     .slides__item:nth-last-of-type(-n + 2) {
         display: block;
