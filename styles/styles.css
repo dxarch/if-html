@@ -12,7 +12,8 @@
     --accent-yellow: #F5BD41;
     --general-blue: #10367C;
     --secondary-text: #BFBFBF;
-    --bg-color-main: #EAF0F9;
+    --accent-blue: #EAF0F9;
+    --stroke-main: #F3F3F4;
 }
 
 .col-lg-1 {
@@ -395,7 +396,7 @@ body {
 
 .homes {
     order: 3;
-    background-color: #EAF0F9;
+    background-color: var(--accent-blue);
 }
 
 .slides {
@@ -420,7 +421,7 @@ body {
     cursor: pointer;
     height: 40px;
     width: 40px;
-    background-color: #F3F3F4;
+    background-color: var(--stroke-main);
     border-radius: 50%;
     top: 30%;
 }
@@ -474,7 +475,7 @@ body {
 .destinations__tabs {
     display: flex;
     height: 64px;
-    background-color: #F3F3F4;
+    background-color: var(--stroke-main);
     margin-bottom: 65px;
     border-radius: 8px;
 }
@@ -515,7 +516,7 @@ body {
 }
 
 .sign-up {
-    background-color: #EAF0F9;
+    background-color: var(--accent-blue);
     position: relative;
     height: 200px;
     display: flex;
@@ -580,7 +581,7 @@ body {
 }
 
 .slides__item--reviews {
-    background-color: #EAF0F9;
+    background-color: var(--accent-blue);
     max-width: 400px;
 }
 
@@ -1083,7 +1084,7 @@ body {
     }
 
     .destinations__tab {
-        border: 1px solid #F3F3F4;
+        border: 1px solid var(--stroke-main);
         border-radius: 8px;
         font-size: 19px;
     }
