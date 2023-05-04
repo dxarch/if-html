@@ -12,8 +12,9 @@
     --accent-yellow: #F5BD41;
     --general-blue: #10367C;
     --secondary-text: #BFBFBF;
-    --accent-blue: #EAF0F9;
+    --accent-blue: #3077C6;
     --stroke-main: #F3F3F4;
+    --bg-main: #EAF0F9;
 }
 
 .col-lg-1 {
@@ -83,9 +84,10 @@ body {
 }
 
 .wrapper {
+    max-width: 1232px;
     width: 100%;
     margin: 0 auto;
-    padding: 120px 105px 120px;
+    padding: 120px 0;
 }
 
 .--center-align {
@@ -145,7 +147,6 @@ body {
 
 .top {
     order: 1;
-    min-height: 100vh;
     background-image: url(../images/background-castle.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -158,7 +159,7 @@ body {
 
 
 .nav {
-    height: 46px;
+    height: 45px;
     margin-bottom: 195px;
     justify-content: space-between;
 }
@@ -396,12 +397,10 @@ body {
 
 .homes {
     order: 3;
-    background-color: var(--accent-blue);
+    background-color: var(--bg-main);
 }
 
 .slides {
-    max-width: 1232px;
-    margin: 0 auto;
     display: flex;
     gap: 16px;
 }
@@ -451,7 +450,10 @@ body {
 }
 
 .slides__image {
-    max-width: 100%;
+    /*position: relative;*/
+    min-height: 0;
+    width: 100%;
+    max-height: 296px;
     object-fit: cover;
     aspect-ratio: 1 / 1;
 }
@@ -504,6 +506,44 @@ body {
     padding-bottom: 48px;
 }
 
+.destinations__image:before {
+    display: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #383838;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.destinations__image:hover:before {
+    opacity: .4;
+    box-shadow: inset 0 4px 70px 0 rgba(56, 56, 56, .5);
+}
+
+.destinations__image:hover .destinations__btn {
+    opacity: 1;
+}
+
+.destinations__btn {
+    opacity: 0;
+    position: absolute;
+    width: 128px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    background-color: var(--white);
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+}
+
 .destinations__arrow {
     position: absolute;
     top: revert;
@@ -516,7 +556,7 @@ body {
 }
 
 .sign-up {
-    background-color: var(--accent-blue);
+    background-color: var(--bg-main);
     position: relative;
     height: 200px;
     display: flex;
@@ -527,7 +567,7 @@ body {
 
 .wrapper--sign-up {
     order: 5;
-    padding: 0 105px;
+    padding: 0;
 }
 
 .sign-up__title-mobile,
@@ -581,7 +621,7 @@ body {
 }
 
 .slides__item--reviews {
-    background-color: var(--accent-blue);
+    background-color: var(--bg-main);
     max-width: 400px;
 }
 
@@ -652,7 +692,7 @@ body {
     font-size: 14px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1265px) {
     .col-md-1 {
         width: var(--col-md-width);
     }
@@ -701,13 +741,12 @@ body {
         padding: 60px 80px;
     }
 
-    .nav {
-        margin-bottom: 150px;
+    .heading {
+        margin-bottom: 80px;
     }
 
-    .booking {
-        margin-bottom: 15px;
-        gap: 16px;
+    .nav {
+        margin-bottom: 150px;
     }
 
     .booking__form {
@@ -1066,8 +1105,10 @@ body {
     .destinations__arrow {
         position: absolute;
         right: -12px;
-        margin-left: auto;
         top: calc(50% - 10px);
+        left: revert;
+        margin: 0;
+        /*transform: translateY(-50%);*/
     }
 
     .arrow__icon--down {
