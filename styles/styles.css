@@ -511,25 +511,44 @@ body {
     padding-bottom: 48px;
 }
 
+.destinations__image {
+    position: relative;
+}
+
 .destinations__image:before {
     display: none;
     content: '';
     position: absolute;
     left: 0;
     top: 0;
+    background: #383838;
     width: 100%;
     height: 100%;
-    background: #383838;
     opacity: 0;
-    transition: .5s ease;
 }
 
-.destinations__image:hover:before {
+.destinations__item:hover .destinations__image:before {
+    display: block;
     opacity: .4;
     box-shadow: inset 0 4px 70px 0 rgba(56, 56, 56, .5);
+    animation: destinations-hover 500ms linear;
 }
 
-.destinations__image:hover .destinations__btn {
+@keyframes destinations-hover {
+    0% {
+        opacity: .1;
+    }
+
+    50% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: .4;
+    }
+}
+
+.destinations__item:hover .destinations__btn {
     opacity: 1;
 }
 
