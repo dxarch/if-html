@@ -95,30 +95,30 @@
               <input type="text" class="booking__input booking__form--text" name="city" id="city" placeholder="New York">
             </div>
             <div class="booking__dates col-lg-3 col-md-3">
-              <div class="label__wrap label__wrap--date label__wrap--horiz-div">
-                <label for="check-in" class="label__booking label__booking--padding label__booking--date --hidden">Check-in</label>
-                <div class="booking__input booking__input--date booking__form--text --text-right" id="check-in">Tue 15 Sept</div>
-              </div>
-              <div class="label__wrap label__wrap--date">
-                <label for="check-out" class="label__booking label__booking--padding label__booking--date --hidden">Check-out</label>
-                <div class="booking__input booking__form--text --text-left" id="check-out">Sat 19 Sept</div>
-              </div>
-            </div>
-            <div class="booking__people col-lg-3 col-md-3">
-              <div class="label__wrap label__wrap--people label__wrap--vertical-line label__wrap--horiz-div">
-                <label for="adults" class="label__booking">Adults</label>
-                <div id="adults" class="booking__input booking__form--text --text-right --trailing-space">2</div>
-              </div>
-              <div class="label__wrap label__wrap--people label__wrap--vertical-line label__wrap--horiz-div">
-                <label for="children" class="label__booking">Children</label>
-                <div id="children" class="booking__input booking__form--text --text-center --trailing-space">0</div>
-              </div>
-              <div class="label__wrap label__wrap--people">
-                <label for="rooms" class="label__booking">Rooms</label>
-                <div id="rooms" class="booking__input booking__form--text --text-left --trailing-space">1</div>
-              </div>
-            </div>
-            <button class="booking__button col-lg-2 col-md-2">Search</button>
+                <div class="label__wrap label__wrap--two-level label__wrap--horiz-div">
+                  <label for="check-in" class="label__booking label__booking--padding label__booking--date --hidden">Check-in</label>
+                  <div class="booking__input booking__input--date booking__form--text --text-right" id="check-in">Tue 15 Sept</div>
+                </div>
+                  <div class="label__wrap label__wrap--two-level">
+                    <label for="check-out" class="label__booking label__booking--padding label__booking--date --hidden">Check-out</label>
+                    <div class="booking__input booking__form--text --text-left" id="check-out">Sat 19 Sept</div>
+                  </div>
+                </div>
+                <div class="booking__people col-lg-3 col-md-3">
+                    <div class="label__wrap label__wrap--two-level label__wrap--vertical-line label__wrap--horiz-div">
+                      <label for="adults" class="label__booking">Adults</label>
+                      <div id="adults" class="booking__input booking__form--text --text-right --trailing-space">2</div>
+                    </div>
+                      <div class="label__wrap label__wrap--two-level label__wrap--vertical-line label__wrap--horiz-div">
+                        <label for="children" class="label__booking">Children</label>
+                        <div id="children" class="booking__input booking__form--text --text-center --trailing-space">0</div>
+                      </div>
+                        <div class="label__wrap label__wrap--two-level">
+                          <label for="rooms" class="label__booking">Rooms</label>
+                          <div id="rooms" class="booking__input booking__form--text --text-left --trailing-space">1</div>
+                        </div>
+                      </div>
+                      <button class="booking__button col-lg-2 col-md-2">Search</button>
           </form>
         </div>
         <div class="download">
@@ -136,7 +136,7 @@
       </div>
     </div>
   </section>
-    <section class="offer">
+  <section class="offer">
       <div class="offer__wrapper wrapper">
         <h2 class="heading heading--offer">What do we offer</h2>
         <div class="offer__block offer__block--gap_16">
@@ -167,35 +167,139 @@
         </div>
       </div>
     </section>
-  <section class="homes wrapper wrapper--homes">
-    <h2 class="heading heading--homes">Homes guests love</h2>
-    <div class="homes__block col-lg-12">
-      <div class="slides homes__slides">
-        <figure class="slides__item col-lg-3 col-sm-3">
-          <img src="images/homes/hotel_leopold.png" alt="Hotel Leopold" class="slides__image">
-          <figcaption class="slides__caption slides__caption--primary">Hotel Leopold</figcaption>
-          <p class="slides__caption slides__caption--secondary">Saint Petersburg, Russia</p>
-        </figure>
-        <figure class="slides__item col-lg-3 col-sm-3">
-          <img src="images/homes/apartment_sunshine.png" alt="Apartment Sunshine" class="slides__image">
-          <figcaption class="slides__caption slides__caption--primary">Apartment Sunshine</figcaption>
-          <p class="slides__caption slides__caption--secondary">Santa  Cruz de Tenerife, Spain</p>
-        </figure>
-        <figure class="slides__item col-lg-3 col-sm-3">
-          <img src="images/homes/villa_kunerad.png" alt="Villa Kunerad" class="slides__image">
-          <figcaption class="slides__caption slides__caption--primary">Villa Kunerad</figcaption>
-          <p class="slides__caption slides__caption--secondary">Vysokie Tatry, Slowakia</p>
-        </figure>
-        <figure class="slides__item col-lg-3 col-sm-3">
-          <img src="images/homes/hotel_friendship.png" alt="Hostel Friendship" class="slides__image">
-          <figcaption class="slides__caption slides__caption--primary">Hostel Friendship</figcaption>
-          <p class="slides__caption slides__caption--secondary">Berlin, Germany</p>
-        </figure>
-        <span class="slides__arrow slides__arrow--right">
+  <section class="homes">
+    <div class="wrapper wrapper--homes">
+      <h2 class="heading heading--homes">Homes guests love</h2>
+      <div class="homes__block col-lg-12">
+        <div class="slides homes__slides">
+          <figure class="slides__item col-lg-3 col-sm-3">
+            <img src="images/homes/hotel_leopold.png" alt="Hotel Leopold" class="slides__image">
+            <figcaption class="slides__caption slides__caption--primary">Hotel Leopold</figcaption>
+            <p class="slides__caption slides__caption--secondary">Saint Petersburg, Russia</p>
+          </figure>
+          <figure class="slides__item col-lg-3 col-sm-3">
+            <img src="images/homes/apartment_sunshine.png" alt="Apartment Sunshine" class="slides__image">
+            <figcaption class="slides__caption slides__caption--primary">Apartment Sunshine</figcaption>
+            <p class="slides__caption slides__caption--secondary">Santa  Cruz de Tenerife, Spain</p>
+          </figure>
+          <figure class="slides__item col-lg-3 col-sm-3">
+            <img src="images/homes/villa_kunerad.png" alt="Villa Kunerad" class="slides__image">
+            <figcaption class="slides__caption slides__caption--primary">Villa Kunerad</figcaption>
+            <p class="slides__caption slides__caption--secondary">Vysokie Tatry, Slowakia</p>
+          </figure>
+          <figure class="slides__item col-lg-3 col-sm-3">
+            <img src="images/homes/hotel_friendship.png" alt="Hostel Friendship" class="slides__image">
+            <figcaption class="slides__caption slides__caption--primary">Hostel Friendship</figcaption>
+            <p class="slides__caption slides__caption--secondary">Berlin, Germany</p>
+          </figure>
+          <span class="slides__arrow slides__arrow--right">
           <svg class="arrow__icon">
             <use href="images/sprites/icons.svg#arrow-right"></use>
           </svg>
         </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="destinations">
+    <div class="wrapper wrapper--destinations">
+      <h2 class="heading">The best destinations</h2>
+      <div class="destinations__tabs col-lg-6 col-md-6 col-sm-6">
+        <div class="destinations__tab destinations__tab--selected">
+          <p>Regions</p>
+        </div>
+        <div class="destinations__tab">
+          <p>Cities</p>
+        </div>
+        <div class="destinations__tab">
+          <p class="desktop">Places of interest</p>
+          <p class="mobile">Places</p>
+        </div>
+      </div>
+      <div class="slides destinations__slides col-lg-12">
+        <figure class="destinations__item slides__item col-lg-3 col-sm-3">
+          <div class="destinations__image slides__image">
+            <img src="./images/destinations/maldives.png" alt="Maldives" class="slides__image">
+            <button class="destinations__btn">Book now</button>
+          </div>
+          <figcaption class="slides__caption slides__caption--primary">Maldives</figcaption>
+        </figure>
+        <figure class="slides__item destinations__item col-lg-3 col-sm-3">
+          <div class="destinations__image slides__image">
+            <img src="./images/destinations/spain.png" alt="Spain" class="slides__image">
+            <button class="destinations__btn">Book now</button>
+          </div>
+          <figcaption class="slides__caption slides__caption--primary">Spain</figcaption>
+        </figure>
+        <figure class="slides__item destinations__item col-lg-3 col-sm-3">
+          <div class="destinations__image slides__image">
+            <img src="./images/destinations/norway.png" alt="Norway" class="slides__image">
+            <button class="destinations__btn">Book now</button>
+          </div>
+          <figcaption class="slides__caption slides__caption--primary">Norway</figcaption>
+        </figure>
+        <figure class="slides__item destinations__item col-lg-3 col-sm-3">
+          <div class="destinations__image slides__image">
+            <img src="./images/destinations/iceland.png" alt="Iceland" class="slides__image">
+            <button class="destinations__btn">Book now</button>
+          </div>
+          <figcaption class="slides__caption slides__caption--primary">Iceland</figcaption>
+        </figure>
+        <span class="slides__arrow destinations__arrow">
+            <svg class="arrow__icon arrow__icon--down">
+              <use href="images/sprites/icons.svg#arrow-down"></use>
+            </svg>
+        </span>
+      </div>
+    </div>
+  </section>
+  <div class="wrapper wrapper--sign-up">
+    <section class="sign-up col-lg-12 col-sm-6">
+      <span class="sign-up__user">
+          <svg class="sign-up__icon">
+            <use href="images/sprites/icons.svg#user"></use>
+          </svg>
+      </span>
+      <div class="sign-up__offer">
+        <svg class="close__icon">
+          <use href="images/sprites/icons.svg#close"></use>
+        </svg>
+        <svg class="sign-up__icon sign-up__icon--app">
+          <use href="images/sprites/icons.svg#triphouse-app"></use>
+        </svg>
+        <p class="sign-up__title-desktop">Sign up and get 20% off your first booking</p>
+        <p class="sign-up__title-mobile col-sm-3">Sign up in the app and get 20% off your first booking</p>
+        <button class="sign-up__button">Sign up</button>
+        <a href="#" class="sign-up__install">Install</a>
+      </div>
+    </section>
+  </div>
+  <section class="reviews">
+    <div class="wrapper">
+      <h2 class="heading">Guest reviews</h2>
+      <div class="slides col-lg-12 col-sm-6">
+        <div class="slides__item slides__item--reviews col-lg-4 col-sm-6">
+          <div class="reviews__image-wrap">
+            <img src="images/reviews/bali.png" alt="Ubud Bali Resort&SPA" class="reviews__image">
+            <div class="reviews__price">
+              <p>From 250 USD</p>
+            </div>
+          </div>
+          <div class="reviews__resort wrapper--resort">
+
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nulla.</p>
+        </div>
+        <div class="slides__item slides__item--reviews col-lg-4 col-sm-6">
+          <div class="reviews__relative-pos">
+            <img src="images/reviews/rotterdam.png" alt="King Kong Hostel" class="reviews__image">
+          </div>
+        </div>
+        <div class="slides__item slides__item--reviews col-lg-4 col-sm-6">
+          <div class="reviews__relative-pos">
+            <img src="images/reviews/marocco.png" alt="Rokoko Hotel" class="reviews__image">
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -207,24 +311,24 @@
       <div class="footer__block col-sm-4">
         <ul class="footer__list --text-left col-lg-4">
           <li class="footer__title">About</li>
-          <li><a href="#" class="footer__link">How Triphouse works</a></li>
-          <li><a href="#" class="footer__link">Careers</a></li>
-          <li><a href="#" class="footer__link">Privacy</a></li>
-          <li><a href="#" class="footer__link">Terms</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">How Triphouse works</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
         </ul>
         <ul class="footer__list --text-left col-lg-4">
           <li class="footer__title">Property types</li>
-          <li><a href="#" class="footer__link">Guest houses</a></li>
-          <li><a href="#" class="footer__link">Hotels</a></li>
-          <li><a href="#" class="footer__link">Apartments</a></li>
-          <li><a href="#" class="footer__link">Villas</a></li>
-          <li><a href="#" class="footer__link">Holiday homes</a></li>
-          <li><a href="#" class="footer__link">Hostels</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Guest houses</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Hotels</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Apartments</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Villas</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Holiday homes</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Hostels</a></li>
         </ul>
         <ul class="footer__list --text-left col-lg-4">
           <li class="footer__title">Support</li>
-          <li><a href="#" class="footer__link">Contact Customer Service</a></li>
-          <li><a href="#" class="footer__link">FAQ</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Contact Customer Service</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">FAQ</a></li>
         </ul>
       </div>
       <p class="footer__copyright col-sm-4">© 2022 Triphouse, Inc. All rights reserved</p>
