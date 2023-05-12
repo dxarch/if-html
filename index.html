@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="icon" href="images/favicon.svg" type="image/x-icon">
   </head>
-  <body>
+  <body class="col">
   <svg class="icon__google-play--top" xmlns="http://www.w3.org/2000/svg">
     <symbol id="google-play" viewBox="0 0 135 40" fill="none">
       <path d="M130 40H5c-2.75 0-5-2.25-5-5V5c0-2.75 2.25-5 5-5h125c2.75 0 5 2.25 5 5v30c0 2.75-2.25 5-5 5Z" fill="#000"/>
@@ -55,26 +55,38 @@
 
   <section class="top">
     <div class="wrapper wrapper--top">
-      <nav class="nav --center-align col-lg-12">
+      <nav class="flex nav col-lg-12">
         <svg class="icon icon__logo icon__logo--blue">
           <use href="images/sprites/icons.svg#logo"></use>
         </svg>
-        <div class="nav__menu nav--gap_48 --center-align">
-          <ul class="nav__links nav--gap_24 --center-align">
-            <li><a href="#" class="nav__link nav__link--fs_24">Stays</a></li>
-            <li><a href="#" class="nav__link nav__link--fs_24">Attractions</a></li>
+        <div class="flex nav__menu">
+          <ul class="flex nav__links">
+            <li><a href="#" class="nav__link">Stays</a></li>
+            <li><a href="#" class="nav__link">Attractions</a></li>
           </ul>
-          <div class="nav__icons nav--gap_24 --center-align">
-            <svg class="icon icon__night">
-              <use href="images/sprites/icons.svg#night"></use>
-            </svg>
-            <svg class="icon icon__account">
-              <use href="images/sprites/icons.svg#account"></use>
-            </svg>
-            <svg class="icon icon__burger --hidden">
-              <use href="images/sprites/icons.svg#burger"></use>
-            </svg>
-          </div>
+          <ul class="flex nav__links nav__links--icons">
+            <li>
+              <button>
+                <svg class="nav__icon nav__icon--night">
+                  <use href="images/sprites/icons.svg#night"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button>
+                <svg class="nav__icon nav__icon--account">
+                  <use href="images/sprites/icons.svg#account"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button>
+                <svg class="nav__icon nav__icon--burger --hidden">
+                  <use href="images/sprites/icons.svg#burger"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
         </div>
       </nav>
       <div class="booking col-lg-12">
@@ -92,42 +104,42 @@
               <svg class="icon icon__search --hidden">
                 <use href="images/sprites/icons.svg#search"></use>
               </svg>
-              <input type="text" class="booking__input booking__form--text" name="city" id="city" placeholder="New York">
+              <input type="text" class="booking__input booking__wrapper booking__form--text" name="city" id="city" placeholder="New York">
             </div>
-            <div class="booking__dates col-lg-3 col-md-3">
+            <div class="booking__dates booking__wrapper flex flex__center col-lg-3 col-md-3">
                 <div class="label__wrap label__wrap--two-level label__wrap--horiz-div">
                   <label for="check-in" class="label__booking label__booking--padding label__booking--date --hidden">Check-in</label>
-                  <div class="booking__input booking__input--date booking__form--text --text-right" id="check-in">Tue 15 Sept</div>
+                  <input class="booking__input booking__input--date booking__form--text --text-right" id="check-in" placeholder="Tue 15 Sept" disabled>
                 </div>
                   <div class="label__wrap label__wrap--two-level">
                     <label for="check-out" class="label__booking label__booking--padding label__booking--date --hidden">Check-out</label>
-                    <div class="booking__input booking__form--text --text-left" id="check-out">Sat 19 Sept</div>
-                  </div>
+                    <input class="booking__input booking__form--text --text-left" id="check-out" placeholder="Sat 19 Sept" disabled>
                 </div>
-                <div class="booking__people col-lg-3 col-md-3">
+            </div>
+                <div class="flex flex__center booking__people booking__wrapper col-lg-3 col-md-3">
                     <div class="label__wrap label__wrap--two-level label__wrap--vertical-line label__wrap--horiz-div">
                       <label for="adults" class="label__booking">Adults</label>
-                      <div id="adults" class="booking__input booking__form--text --text-right --trailing-space">2</div>
+                      <div id="adults" class="booking__input booking__form--text --text-right --trailing-space" placeholder="2">2</div>
                     </div>
                       <div class="label__wrap label__wrap--two-level label__wrap--vertical-line label__wrap--horiz-div">
                         <label for="children" class="label__booking">Children</label>
-                        <div id="children" class="booking__input booking__form--text --text-center --trailing-space">0</div>
+                        <div id="children" class="booking__input booking__form--text --text-center --trailing-space" placeholder="0">0</div>
                       </div>
                         <div class="label__wrap label__wrap--two-level">
                           <label for="rooms" class="label__booking">Rooms</label>
-                          <div id="rooms" class="booking__input booking__form--text --text-left --trailing-space">1</div>
+                          <div id="rooms" class="booking__input booking__form--text --text-left --trailing-space" placeholder="1">1</div>
                         </div>
-                      </div>
-                      <button class="booking__button col-lg-2 col-md-2">Search</button>
+                </div>
+            <button class="booking__button col-lg-2 col-md-2">Search</button>
           </form>
         </div>
         <div class="download">
-          <a href="#" class="download__link">
+          <a href="#" class="download__link" target="_blank">
             <svg class="icon icon__google-play">
               <use href="#google-play"></use>
             </svg>
           </a>
-          <a href="#" class="download__link">
+          <a href="#" class="download__link" target="_blank">
             <svg class="icon icon__app-store">
               <use href="images/sprites/icons.svg#app-store"></use>
             </svg>
@@ -139,26 +151,26 @@
   <section class="offer">
       <div class="offer__wrapper wrapper">
         <h2 class="heading heading--offer">What do we offer</h2>
-        <div class="offer__block offer__block--gap_16">
-          <div class="offer__item col-lg-3 col-sm-4">
+        <div class="offer__block flex justify-center">
+          <div class="offer__item flex flex__col flex__center col-lg-3 col-sm-4">
             <svg class="offer__icon offer__icon--support">
               <use href="images/sprites/icons.svg#support"></use>
             </svg>
             <p class="offer__desc">Support 24/7</p>
           </div>
-          <div class="offer__item col-lg-3 col-sm-4">
+          <div class="offer__item flex flex__col flex__center col-lg-3 col-sm-4">
             <svg class="offer__icon offer__icon--communicate">
               <use href="images/sprites/icons.svg#communicate"></use>
             </svg>
             <p class="offer__desc">Communicate directly</p>
           </div>
-          <div class="offer__item col-lg-3 col-sm-4">
+          <div class="offer__item flex flex__col flex__center col-lg-3 col-sm-4">
             <svg class="offer__icon offer__icon--book">
               <use href="images/sprites/icons.svg#book-online"></use>
             </svg>
             <p class="offer__desc">Book online</p>
           </div>
-          <div class="offer__item col-lg-3 col-sm-4">
+          <div class="offer__item flex flex__col flex__center col-lg-3 col-sm-4">
             <svg class="offer__icon offer__icon--reviews">
               <use href="images/sprites/icons.svg#reviews"></use>
             </svg>
@@ -170,33 +182,40 @@
   <section class="homes">
     <div class="wrapper wrapper--homes">
       <h2 class="heading heading--homes">Homes guests love</h2>
-      <div class="homes__block col-lg-12">
+      <div class="relative col-lg-12">
         <div class="slides homes__slides">
-          <figure class="slides__item col-lg-3 col-sm-3">
+          <figure class="flex flex__col slides__item col-lg-3 col-sm-3">
             <img src="images/homes/hotel_leopold.png" alt="Hotel Leopold" class="slides__image">
             <figcaption class="slides__caption slides__caption--primary">Hotel Leopold</figcaption>
             <p class="slides__caption slides__caption--secondary">Saint Petersburg, Russia</p>
           </figure>
-          <figure class="slides__item col-lg-3 col-sm-3">
+          <figure class="flex flex__col slides__item col-lg-3 col-sm-3">
             <img src="images/homes/apartment_sunshine.png" alt="Apartment Sunshine" class="slides__image">
             <figcaption class="slides__caption slides__caption--primary">Apartment Sunshine</figcaption>
             <p class="slides__caption slides__caption--secondary">Santa  Cruz de Tenerife, Spain</p>
           </figure>
-          <figure class="slides__item col-lg-3 col-sm-3">
+          <figure class="flex flex__col slides__item col-lg-3 col-sm-3">
             <img src="images/homes/villa_kunerad.png" alt="Villa Kunerad" class="slides__image">
             <figcaption class="slides__caption slides__caption--primary">Villa Kunerad</figcaption>
             <p class="slides__caption slides__caption--secondary">Vysokie Tatry, Slowakia</p>
           </figure>
-          <figure class="slides__item col-lg-3 col-sm-3">
+          <figure class="flex flex__col slides__item col-lg-3 col-sm-3">
             <img src="images/homes/hotel_friendship.png" alt="Hostel Friendship" class="slides__image">
             <figcaption class="slides__caption slides__caption--primary">Hostel Friendship</figcaption>
             <p class="slides__caption slides__caption--secondary">Berlin, Germany</p>
           </figure>
-          <span class="slides__arrow slides__arrow--right">
-          <svg class="arrow__icon">
-            <use href="images/sprites/icons.svg#arrow-right"></use>
-          </svg>
-        </span>
+        </div>
+        <div class="slides__carousel slides__carousel--homes">
+          <div class="slides__arrow slides__arrow--left">
+            <svg class="arrow__icon">
+              <use href="images/sprites/icons.svg#arrow-right"></use>
+            </svg>
+          </div>
+          <div class="slides__arrow slides__arrow--right">
+            <svg class="arrow__icon">
+              <use href="images/sprites/icons.svg#arrow-right"></use>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -205,57 +224,70 @@
     <div class="wrapper wrapper--destinations">
       <h2 class="heading">The best destinations</h2>
       <div class="destinations__tabs col-lg-6 col-md-6 col-sm-6">
-        <div class="destinations__tab destinations__tab--selected">
-          <p>Regions</p>
-        </div>
-        <div class="destinations__tab">
-          <p>Cities</p>
-        </div>
-        <div class="destinations__tab">
-          <p class="desktop">Places of interest</p>
-          <p class="mobile">Places</p>
-        </div>
+        <button class="destinations__tab destinations__tab--selected flex flex__center">
+          Regions
+        </button>
+        <button class="destinations__tab">
+          Cities
+        </button>
+        <button class="destinations__tab">
+          Places
+        </button>
       </div>
-      <div class="slides destinations__slides col-lg-12">
-        <figure class="destinations__item slides__item col-lg-3 col-sm-3">
-          <div class="destinations__image slides__image">
-            <img src="./images/destinations/maldives.png" alt="Maldives" class="slides__image">
-            <button class="destinations__btn">Book now</button>
-          </div>
-          <figcaption class="slides__caption slides__caption--primary">Maldives</figcaption>
-        </figure>
-        <figure class="slides__item destinations__item col-lg-3 col-sm-3">
-          <div class="destinations__image slides__image">
-            <img src="./images/destinations/spain.png" alt="Spain" class="slides__image">
-            <button class="destinations__btn">Book now</button>
-          </div>
-          <figcaption class="slides__caption slides__caption--primary">Spain</figcaption>
-        </figure>
-        <figure class="slides__item destinations__item col-lg-3 col-sm-3">
-          <div class="destinations__image slides__image">
-            <img src="./images/destinations/norway.png" alt="Norway" class="slides__image">
-            <button class="destinations__btn">Book now</button>
-          </div>
-          <figcaption class="slides__caption slides__caption--primary">Norway</figcaption>
-        </figure>
-        <figure class="slides__item destinations__item col-lg-3 col-sm-3">
-          <div class="destinations__image slides__image">
-            <img src="./images/destinations/iceland.png" alt="Iceland" class="slides__image">
-            <button class="destinations__btn">Book now</button>
-          </div>
-          <figcaption class="slides__caption slides__caption--primary">Iceland</figcaption>
-        </figure>
-        <span class="slides__arrow destinations__arrow">
-            <svg class="arrow__icon arrow__icon--down">
-              <use href="images/sprites/icons.svg#arrow-down"></use>
+      <div class="relative col-lg-12">
+        <div class="slides destinations__slides">
+          <figure class="slides__item destinations__item col-lg-3 col-sm-3">
+            <div class="destinations__image slides__image">
+              <img src="./images/destinations/maldives.png" alt="Maldives" class="slides__image">
+              <button class="destinations__btn">Book now</button>
+            </div>
+            <figcaption class="slides__caption slides__caption--primary">Maldives</figcaption>
+          </figure>
+          <figure class="slides__item destinations__item col-lg-3 col-sm-3">
+            <div class="destinations__image slides__image">
+              <img src="./images/destinations/spain.png" alt="Spain" class="slides__image">
+              <button class="destinations__btn">Book now</button>
+            </div>
+            <figcaption class="slides__caption slides__caption--primary">Spain</figcaption>
+          </figure>
+          <figure class="slides__item destinations__item col-lg-3 col-sm-3">
+            <div class="destinations__image slides__image">
+              <img src="./images/destinations/norway.png" alt="Norway" class="slides__image">
+              <button class="destinations__btn">Book now</button>
+            </div>
+            <figcaption class="slides__caption slides__caption--primary">Norway</figcaption>
+          </figure>
+          <figure class="slides__item destinations__item col-lg-3 col-sm-3">
+            <div class="destinations__image slides__image">
+              <img src="./images/destinations/iceland.png" alt="Iceland" class="slides__image">
+              <button class="destinations__btn">Book now</button>
+            </div>
+            <figcaption class="slides__caption slides__caption--primary">Iceland</figcaption>
+          </figure>
+        </div>
+        <div class="slides__carousel slides__carousel--destinations">
+          <div class="slides__arrow slides__arrow--left">
+            <svg class="arrow__icon">
+              <use href="images/sprites/icons.svg#arrow-right"></use>
             </svg>
-        </span>
+          </div>
+          <div class="slides__arrow slides__arrow--right">
+            <svg class="arrow__icon">
+              <use href="images/sprites/icons.svg#arrow-right"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="slides__arrow destinations__arrow">
+          <svg class="arrow__icon slides__arrow--down">
+            <use href="images/sprites/icons.svg#arrow-right"></use>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
   <div class="wrapper wrapper--sign-up">
     <section class="sign-up col-lg-12 col-sm-6">
-      <span class="sign-up__user">
+      <span class="sign-up__user flex flex__center">
           <svg class="sign-up__icon">
             <use href="images/sprites/icons.svg#user"></use>
           </svg>
@@ -275,30 +307,142 @@
     </section>
   </div>
   <section class="reviews">
-    <div class="wrapper">
+    <div class="wrapper wrapper--reviews">
       <h2 class="heading">Guest reviews</h2>
-      <div class="slides col-lg-12 col-sm-6">
-        <div class="slides__item slides__item--reviews col-lg-4 col-sm-6">
-          <div class="reviews__image-wrap">
-            <img src="images/reviews/bali.png" alt="Ubud Bali Resort&SPA" class="reviews__image">
-            <div class="reviews__price">
-              <p>From 250 USD</p>
+      <div class="relative col-lg-12">
+        <div class="slides reviews__slides">
+          <div class="slides__item slides__item--reviews col-lg-4 col-sm-6">
+            <div class="reviews__image-wrap">
+              <img src="images/reviews/bali.png" alt="Ubud Bali Resort&SPA" class="reviews__image">
+              <div class="reviews__price">
+                <p>From 250 USD</p>
+              </div>
+            </div>
+            <div class="reviews__wrapper">
+              <div class="reviews__resort">
+                <div class="flex flex__col reviews__resort-name">
+                  <h3 class="reviews__text--blue">Ubud Bali Resort&SPA</h3>
+                  <p class="reviews__text--blue">Bali, Indonesia</p>
+                </div>
+                <div class="reviews__rating flex flex__col">
+                  <div class="reviews__score">
+                    <p class="reviews__score-text">9,4</p>
+                  </div>
+                  <p class="reviews__count reviews__text--gray">1324 reviews</p>
+                </div>
+              </div>
+              <div class="reviews__author flex">
+                <svg class="reviews__person">
+                  <use href="images/sprites/icons.svg#account"></use>
+                </svg>
+                <div class="reviews__user flex flex__col justify-center">
+                  <p class="reviews__text--black">Hanna Ivanova</p>
+                  <p class="reviews__text--gray"><svg class="reviews__flag">
+                    <use href="images/sprites/icons.svg#ua-flag"></use>
+                  </svg>Ukraine</p>
+                </div>
+              </div>
+              <p class="reviews__text reviews__text--black">Great location, really pleasant and clean rooms, but the thing that makes this such a good place to stay are the staff. All of the people are incredibly helpful and generous with their time and advice. </p>
             </div>
           </div>
-          <div class="reviews__resort wrapper--resort">
-
+          <div class="slides__item slides__item--reviews col-lg-4 col-sm-6">
+            <div class="reviews__image-wrap">
+              <img src="images/reviews/rotterdam.png" alt="King Kong Hostel" class="reviews__image">
+              <div class="reviews__price">
+                <p>From 40 USD</p>
+              </div>
+            </div>
+            <div class="reviews__wrapper">
+              <div class="reviews__resort">
+                <div class="flex flex__col reviews__resort-name">
+                  <h3 class="reviews__text--blue">King Kong Hostel</h3>
+                  <p class="reviews__text--blue">Rotterdam, Netherlands</p>
+                </div>
+                <div class="reviews__rating flex flex__col">
+                  <div class="reviews__score">
+                    <p class="reviews__score-text">8,9</p>
+                  </div>
+                  <p class="reviews__count reviews__text--gray">2016 reviews</p>
+                </div>
+              </div>
+              <div class="reviews__author flex">
+                <div class="reviews__icon">
+                  <svg class="reviews__person">
+                    <use href="images/sprites/icons.svg#account"></use>
+                  </svg>
+                </div>
+                <div class="reviews__user flex flex__col justify-center">
+                  <p class="reviews__text--black">Adam Smith</p>
+                  <p class="reviews__text--gray">
+                    <svg class="reviews__flag">
+                      <use href="images/sprites/icons.svg#usa-flag"></use>
+                    </svg>
+                    USA
+                  </p>
+                </div>
+              </div>
+              <p class="reviews__text reviews__text--black">I've been in this hostel for a month and here is the best hostel of all
+                Excellent management of excellent and ethical staff and bedrooms Bathrooms are always clean and excellent
+                Most importantly, those who work here are kind and good-natured.</p>
+            </div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nulla.</p>
+          <div class="slides__item slides__item--reviews col-lg-4 col-sm-6">
+            <div class="reviews__image-wrap">
+              <img src="images/reviews/marocco.png" alt="Rokoko Hotel" class="reviews__image">
+              <div class="reviews__price">
+                <p>From 100 USD</p>
+              </div>
+            </div>
+            <div class="reviews__wrapper">
+              <div class="reviews__resort">
+                <div class="reviews__resort-name flex flex__col">
+                  <h3 class="reviews__text--blue">Rokoko Hotel</h3>
+                  <p class="reviews__text--blue">Ourika, Marocco</p>
+                </div>
+                <div class="reviews__rating flex flex__col">
+                  <div class="reviews__score">
+                    <p class="reviews__score-text">9,1</p>
+                  </div>
+                  <p class="reviews__count reviews__text--gray">815 reviews</p>
+                </div>
+              </div>
+              <div class="reviews__author flex">
+                <div class="reviews__icon">
+                  <svg class="reviews__person">
+                    <use href="images/sprites/icons.svg#account"></use>
+                  </svg>
+                </div>
+                <div class="reviews__user flex flex__col justify-center">
+                  <p class="reviews__text--black">Anika Messer</p>
+                  <p class="reviews__text--gray">
+                    <svg class="reviews__flag">
+                      <use href="images/sprites/icons.svg#germany-flag"></use>
+                    </svg>
+                    Germany
+                  </p>
+                </div>
+              </div>
+              <p class="reviews__text reviews__text--black">Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. Easy access to all the surrounding historical sites. Staff is fantastic. Will definitely stay at this location during my next stay in Marocco.</p>
+            </div>
+          </div>
         </div>
-        <div class="slides__item slides__item--reviews col-lg-4 col-sm-6">
-          <div class="reviews__relative-pos">
-            <img src="images/reviews/rotterdam.png" alt="King Kong Hostel" class="reviews__image">
+        <div class="slides__carousel slides__carousel--reviews">
+          <div class="slides__arrow slides__arrow--left">
+            <svg class="arrow__icon">
+              <use href="images/sprites/icons.svg#arrow-right"></use>
+            </svg>
+          </div>
+          <div class="slides__arrow slides__arrow--right">
+            <svg class="arrow__icon">
+              <use href="images/sprites/icons.svg#arrow-right"></use>
+            </svg>
           </div>
         </div>
-        <div class="slides__item slides__item--reviews col-lg-4 col-sm-6">
-          <div class="reviews__relative-pos">
-            <img src="images/reviews/marocco.png" alt="Rokoko Hotel" class="reviews__image">
-          </div>
+        <div class="swiper">
+          <div class="swiper__item swiper__item--selected"></div>
+          <div class="swiper__item"></div>
+          <div class="swiper__item"></div>
+          <div class="swiper__item"></div>
         </div>
       </div>
     </div>
