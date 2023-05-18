@@ -642,6 +642,11 @@ body {
     line-height: 28px;
 }
 
+.sign-up__offer {
+    display: flex;
+    flex-direction: column;
+}
+
 .sign-up__button {
     width: 128px;
     padding: 12px 0;
@@ -1003,6 +1008,7 @@ body {
     }
 
     .nav__links--icons {
+        display: flex;
         gap: calc(var(--gap-sm) * 2);
     }
 
@@ -1094,6 +1100,10 @@ body {
         position: relative;
         grid-row: 1;
         grid-column: span 6;
+    }
+
+    .booking__input {
+        font-weight: 500;
     }
 
     .booking__input--city {
@@ -1384,7 +1394,7 @@ body {
     }
 
     .sign-up__offer {
-        display: flex;
+        flex-direction: row;
         align-items: center;
         gap: 16px;
         padding: 25px 0;
